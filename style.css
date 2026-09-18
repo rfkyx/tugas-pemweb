@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+
+body {
+    background-color: #0f172a; /* Warna background gelap modern */
+    color: #e2e8f0;
+    line-height: 1.6;
+    /* Efek cahaya gradasi di background */
+    background-image: radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.15), transparent 25%),
+                      radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.12), transparent 25%);
+    background-attachment: fixed;
+}
+
+/* Navbar Efek Kaca (Glassmorphism) */
+.navbar {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    /* Teks gradasi */
+    background: linear-gradient(to right, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+
+.nav-links { list-style: none; display: flex; gap: 2rem; }
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+/* Animasi garis bawah saat di-hover */
+.nav-links a:hover, .nav-links a.active { color: #fff; }
+.nav-links a::after {
+    content: ''; position: absolute; width: 0; height: 2px;
+    bottom: 0; left: 0; background: #8b5cf6; transition: width 0.3s ease;
+}
+.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+
+/* Animasi masuk (Fade Up) */
+.container { max-width: 800px; margin: 4rem auto; padding: 0 20px; animation: fadeUp 0.8s ease-out; }
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Card Modern Transparan */
+.card {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.card h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #f8fafc; letter-spacing: -1px; }
+.card h2 { font-size: 1rem; font-weight: 600; color: #a78bfa; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px; }
+.card p { margin-bottom: 1.2rem; color: #cbd5e1; font-size: 1.05rem; line-height: 1.7; }
+
+/* Tag Keahlian Ala Startup */
+.skills { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; }
+.skill-tag {
+    background: rgba(96, 165, 250, 0.1);
+    color: #60a5fa;
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.skill-tag:hover {
+    background: rgba(96, 165, 250, 0.2);
+    transform: scale(1.05);
+    color: #fff;
+}
+
+/* Responsif HP */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 1rem; padding: 1rem; }
+    .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .card { padding: 2rem; }
+    .card h1 { font-size: 2rem; }
+}
