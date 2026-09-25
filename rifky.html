@@ -4,19 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil - Rifky</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">DevTeam</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="rifky.html" class="active">Profil Rifky</a></li>
-            <li><a href="farel.html">Profil Farel</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg glass-navbar fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">DevTeam</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav nav-links">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="rifky.html">Profil Rifky</a></li>
+                    <li class="nav-item"><a class="nav-link" href="farel.html">Profil Farel</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <div class="container">
-        <div class="card">
+
+    <div class="container main-container">
+        <div class="custom-card">
             <h1>Rifky Khoirul Imdad</h1>
             <h2>Web Developer Enthusiast</h2>
             <p>Halo! Saya adalah seorang mahasiswa yang memiliki ketertarikan kuat di bidang teknologi dan pengembangan perangkat lunak. Saat ini saya sedang berfokus mempelajari algoritma, struktur data, dan pengembangan website modern.</p>
@@ -29,5 +38,7 @@
             </div>
         </div>
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
